@@ -1,0 +1,11 @@
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.deps.json
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.pdb
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Core.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Core.pdb
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.csprojResolveAssemblyReference.cache
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.csproj.CoreCompileInputs.cache
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.AssemblyInfoInputs.cache
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.AssemblyInfo.cs
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.pdb

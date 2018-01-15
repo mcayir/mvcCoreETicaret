@@ -1,0 +1,9 @@
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Core\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Core.deps.json
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Core\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Core.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Core\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Core.pdb
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Core\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Core.csprojResolveAssemblyReference.cache
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Core\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Core.csproj.CoreCompileInputs.cache
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Core\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Core.AssemblyInfoInputs.cache
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Core\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Core.AssemblyInfo.cs
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Core\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Core.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Core\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Core.pdb

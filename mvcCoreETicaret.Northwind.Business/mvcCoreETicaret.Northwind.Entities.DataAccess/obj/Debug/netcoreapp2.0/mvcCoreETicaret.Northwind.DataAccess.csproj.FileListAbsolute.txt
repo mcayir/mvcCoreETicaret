@@ -1,0 +1,13 @@
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.deps.json
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.pdb
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Core.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Core.pdb
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.pdb
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.AssemblyInfoInputs.cache
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.AssemblyInfo.cs
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities.DataAccess\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.pdb

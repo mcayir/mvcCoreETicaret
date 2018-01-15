@@ -1,0 +1,32 @@
+﻿@model mvcCoreETicaret.Northwind.MvcWebUI.Models.ProductListViewModel
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ürünler</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+               <td>Ürün Adı</td>
+               <td>Birim Fiyatı</td>
+               <td>Stok Adedi</td>
+            </tr>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.ProductName</td>
+                    <td>@product.UnitPrice</td>
+                    <td>@product.UnitsInStock</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+
