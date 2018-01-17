@@ -9,5 +9,3 @@ C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Enti
 C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.AssemblyInfo.cs
 C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.dll
 C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.pdb
-C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.Entities\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml

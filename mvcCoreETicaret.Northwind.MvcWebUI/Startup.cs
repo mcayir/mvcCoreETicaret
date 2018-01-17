@@ -6,6 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using mvcCoreETicaret.Northwind.Business.Concrete;
+using mvcCoreETicaret.Northwind.Entities.Concrete;
+using mvcCoreETicaret.Northwind.Business.Abstract;
+using mvcCoreETicaret.Northwind.DataAccess.Concrete.EntityFramework;
+using mvcCoreETicaret.Northwind.DataAccess.Abstract;
+using mvcCoreETicaret.Northwind.MvcWebUI.Middlewares;
+using Microsoft.Extensions.Logging;
 
 namespace mvcCoreETicaret.Northwind.MvcWebUI
 {
@@ -15,20 +22,24 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IProductService,ProductManeger>();
+            services.AddScoped<IProductDal, EfProductDal>();
+            services.AddScoped<ICategoryService, CategoryManeger>();
+            services.AddScoped<ICategoryDal, EfCategoryDal>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+       
+            app.UseFileServer();
+            app.UseNodeModules(env.ContentRootPath);
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

@@ -1,0 +1,31 @@
+﻿@model mvcCoreETicaret.Northwind.MvcWebUI.Models.ProductListViewModel
+
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div>
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Birim Fiyatı</th>
+                <th>Stok Adedi</th>
+            </tr>
+        </thead>
+        @foreach (var product in Model.Products)
+        {
+        <tr>
+            <td>@product.ProductName</td>
+            <td>@product.UnitPrice</td>
+            <td>@product.UnitsInStock</td>
+        </tr>
+        }
+    </table>
+</div>
+<product-list-pager
+    current-category='@Model.CurrentCategory'
+    current-page='@Model.CurrentPage'
+    page-count='@Model.PageCount'
+    page-size="@Model.PageSize">
+</product-list-pager>

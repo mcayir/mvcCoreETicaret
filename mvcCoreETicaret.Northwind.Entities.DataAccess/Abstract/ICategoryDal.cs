@@ -3,7 +3,7 @@ using mvcCoreETicaret.Northwind.Entities.Concrete;
 
 namespace mvcCoreETicaret.Northwind.DataAccess.Abstract
 {
-    public interface ICategoryDal : IEntityRepository<Product>
+    public interface ICategoryDal : IEntityRepository<Category>
     {
         //View ilgili yaomak istediğimiz şeyleri yazacğımız yer.
     }

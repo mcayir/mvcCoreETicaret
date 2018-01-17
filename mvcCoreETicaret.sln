@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcCoreETicaret.Core", "mvcCoreETicaret.Core\mvcCoreETicaret.Core.csproj", "{BFFEC2D4-2C16-47DE-8CBA-CA6A4913E185}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mvcCoreETicaret.Core", "mvcCoreETicaret.Core\mvcCoreETicaret.Core.csproj", "{BFFEC2D4-2C16-47DE-8CBA-CA6A4913E185}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcCoreETicaret.Northwind.Entities", "mvcCoreETicaret.Northwind.Entities\mvcCoreETicaret.Northwind.Entities.csproj", "{5637588D-C30B-4DBC-AD11-7CDF5F64A597}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mvcCoreETicaret.Northwind.Entities", "mvcCoreETicaret.Northwind.Entities\mvcCoreETicaret.Northwind.Entities.csproj", "{5637588D-C30B-4DBC-AD11-7CDF5F64A597}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcCoreETicaret.Northwind.DataAccess", "mvcCoreETicaret.Northwind.Entities.DataAccess\mvcCoreETicaret.Northwind.DataAccess.csproj", "{79B60E7F-1067-4F68-BE91-FB0B04739186}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mvcCoreETicaret.Northwind.DataAccess", "mvcCoreETicaret.Northwind.Entities.DataAccess\mvcCoreETicaret.Northwind.DataAccess.csproj", "{79B60E7F-1067-4F68-BE91-FB0B04739186}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcCoreETicaret.Northwind.Business", "mvcCoreETicaret.Northwind.Business\mvcCoreETicaret.Northwind.Business.csproj", "{3D4CE1D1-A45A-46D1-80D3-685DD9563C24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mvcCoreETicaret.Northwind.Business", "mvcCoreETicaret.Northwind.Business\mvcCoreETicaret.Northwind.Business.csproj", "{3D4CE1D1-A45A-46D1-80D3-685DD9563C24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcCoreETicaret.Northwind.MvcWebUI", "mvcCoreETicaret.Northwind.MvcWebUI\mvcCoreETicaret.Northwind.MvcWebUI.csproj", "{3811D762-7E1C-4E57-9234-2A015072B217}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mvcCoreETicaret.Northwind.MvcWebUI", "mvcCoreETicaret.Northwind.MvcWebUI\mvcCoreETicaret.Northwind.MvcWebUI.csproj", "{3811D762-7E1C-4E57-9234-2A015072B217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

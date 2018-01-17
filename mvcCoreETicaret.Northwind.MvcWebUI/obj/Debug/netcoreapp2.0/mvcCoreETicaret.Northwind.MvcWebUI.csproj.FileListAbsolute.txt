@@ -9,3 +9,11 @@ C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcW
 C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.MvcWebUI.AssemblyInfo.cs
 C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.MvcWebUI.dll
 C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\obj\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.MvcWebUI.pdb
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Core.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Business.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.dll
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Business.pdb
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Core.pdb
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.DataAccess.pdb
+C:\Users\mahmut\Desktop\MvcEgitim\mvcCoreETicaret\mvcCoreETicaret.Northwind.MvcWebUI\bin\Debug\netcoreapp2.0\mvcCoreETicaret.Northwind.Entities.pdb
