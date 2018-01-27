@@ -26,6 +26,8 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI
             services.AddScoped<IProductDal, EfProductDal>();
             services.AddScoped<ICategoryService, CategoryManeger>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
+            services.AddSession();
+            services.AddDistributedMemoryCache();
             services.AddMvc();
         }
 
@@ -39,6 +41,7 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI
        
             app.UseFileServer();
             app.UseNodeModules(env.ContentRootPath);
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
         }
     }
