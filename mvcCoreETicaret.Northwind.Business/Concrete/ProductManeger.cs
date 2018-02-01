@@ -40,5 +40,10 @@ namespace mvcCoreETicaret.Northwind.Business.Concrete
         {
             _productDal.Update(product);
         }
+        public Product GetById(int productId)
+        {
+            return _productDal.Get(p => p.ProductId == productId);
+        }
+
     }
 }

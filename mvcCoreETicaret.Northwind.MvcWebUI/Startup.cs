@@ -13,6 +13,8 @@ using mvcCoreETicaret.Northwind.DataAccess.Concrete.EntityFramework;
 using mvcCoreETicaret.Northwind.DataAccess.Abstract;
 using mvcCoreETicaret.Northwind.MvcWebUI.Middlewares;
 using Microsoft.Extensions.Logging;
+using mvcCoreETicaret.Northwind.MvcWebUI.Services;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 namespace mvcCoreETicaret.Northwind.MvcWebUI
 {
@@ -26,6 +28,9 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI
             services.AddScoped<IProductDal, EfProductDal>();
             services.AddScoped<ICategoryService, CategoryManeger>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
+            services.AddSingleton<ICartSessionService, CartSessionService>();
+            services.AddSingleton<ICartService,CartService>();
+            services.AddSingleton<HttpContextAccessor, HttpContextAccessor>();
             services.AddSession();
             services.AddDistributedMemoryCache();
             services.AddMvc();

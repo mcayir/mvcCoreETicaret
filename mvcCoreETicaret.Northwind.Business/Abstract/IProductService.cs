@@ -10,5 +10,6 @@ namespace mvcCoreETicaret.Northwind.Business.Abstract
         void Add(Product product);
         void Update(Product product);
         void Delete(int productId);
+        Product GetById(int productId);
     }
 }
