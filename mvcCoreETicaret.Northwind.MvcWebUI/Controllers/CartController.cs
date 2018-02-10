@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using mvcCoreETicaret.Northwind.MvcWebUI.Services;
 using mvcCoreETicaret.Northwind.Business.Abstract;
 using mvcCoreETicaret.Northwind.MvcWebUI.Models;
-using mvcCoreETicaret.Northwind.Entities.Concrete;
 
 namespace mvcCoreETicaret.Northwind.MvcWebUI.Controllers
 {
@@ -27,10 +26,10 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI.Controllers
         {
             var productToBeAdded = _productService.GetById(productId);
             var cart = _cartSessionService.GetCart();
-            _cartService.AddtoCart(cart, productToBeAdded);
+            _cartService.AddtoCart(cart,productToBeAdded);
             _cartSessionService.SetCart(cart);
-            TempData.Add("message", String.Format("->,{0},Ürününüz Sepete Eklendi.", productToBeAdded.ProductName));
-            return RedirectToAction("Index", "Product");
+            TempData.Add("message",String.Format("->,{0},Ürününüz Sepete Eklendi.",productToBeAdded.ProductName));
+            return RedirectToAction("Index","Product");
         }
         public ActionResult List()
         {
@@ -40,32 +39,6 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI.Controllers
                 Cart = cart
             };
             return View(cartListViewModel);
-        }
-        public ActionResult Remove(int productId)
-        {
-            var cart = _cartSessionService.GetCart();
-            _cartService.RemovetoCart(cart, productId);
-            _cartSessionService.SetCart(cart);
-            TempData.Add("message", "->Ürününüz Sepetten Silindi.");
-            return RedirectToAction("List");
-        }
-        public ActionResult Complete()
-        {
-            var shippingDetailsViewModel = new ShippingDetailsViewModel
-            {
-                ShippingDetails = new ShippingDetails()
-            };
-            return View(shippingDetailsViewModel);
-        }
-        [HttpPost]
-        public ActionResult Complete(ShippingDetails shippingDetails)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-            TempData.Add("message",String.Format("Teşekkürler {0}, Siparişiniz işleme Alındı.",shippingDetails.FirstName));
-            return View();
         }
     }
 }
