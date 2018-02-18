@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using mvcCoreETicaret.Northwind.Business.Abstract;
 using mvcCoreETicaret.Northwind.MvcWebUI.Models;
 using mvcCoreETicaret.Northwind.Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
 
 namespace mvcCoreETicaret.Northwind.MvcWebUI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IProductService _productService;

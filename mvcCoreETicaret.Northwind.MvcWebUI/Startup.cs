@@ -15,6 +15,9 @@ using mvcCoreETicaret.Northwind.MvcWebUI.Middlewares;
 using Microsoft.Extensions.Logging;
 using mvcCoreETicaret.Northwind.MvcWebUI.Services;
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using mvcCoreETicaret.Northwind.MvcWebUI.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace mvcCoreETicaret.Northwind.MvcWebUI
 {
@@ -31,9 +34,12 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI
             services.AddSingleton<ICartSessionService, CartSessionService>();
             services.AddSingleton<ICartService,CartService>();
             services.AddSingleton<HttpContextAccessor, HttpContextAccessor>();
+            services.AddDbContext<CustomIdentityDbContext>(options=>options.UseSqlServer(@"Data Source=DESKTOP-7GB2ORJ;Initial Catalog=NORTHWND;Integrated Security=True"));
+            services.AddIdentity<CustomIdentityUser, CustomIdentityRole>().AddEntityFrameworkStores<CustomIdentityDbContext>().AddDefaultTokenProviders();
+            services.AddMvc();
             services.AddSession();
             services.AddDistributedMemoryCache();
-            services.AddMvc();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +52,7 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI
        
             app.UseFileServer();
             app.UseNodeModules(env.ContentRootPath);
+            app.UseIdentity();
             app.UseSession();
             app.UseMvcWithDefaultRoute();
         }
