@@ -29,13 +29,19 @@
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                      
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a asp-controller="Product" asp-action="Index">Siteye Dön <span class="sr-only">(current)</span></a></li>
+                       </ul>
+                           
+                            <ul class="nav navbar-nav navbar-right">
 
-                        <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hesap <span class="caret"></span></a>
+                                    @await Component.InvokeAsync("UserSummary")
 
-                        
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
+                                </li>
+                            </ul>
+            </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
         </div>
@@ -43,7 +49,7 @@
 
     <div class="row">
     
-       <div class="col-md-12">
+       <div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
            @if (TempData["message"]!=null)
            {
                <div class="alert alert-info" role="alert">@TempData["message"]</div>
@@ -53,7 +59,7 @@
       
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
             Footer
         </div>
     </div>

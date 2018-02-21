@@ -11,80 +11,93 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI.Controllers
 {
     public class AccountController : Controller
     {
-        private UserManager<CustomIdentityUser> _userManager;
-        private RoleManager<CustomIdentityRole> _roleManager;
-        private  SignInManager<CustomIdentityUser> _signInManager;
+            private UserManager<CustomIdentityUser> _userManager;
+            private RoleManager<CustomIdentityRole> _roleManager;
+            private SignInManager<CustomIdentityUser> _signInManager;
 
-        public AccountController(UserManager<CustomIdentityUser> userManager, RoleManager<CustomIdentityRole> roleManager, SignInManager<CustomIdentityUser> signInManager)
-        {
-            _userManager = userManager;
-            _roleManager = roleManager;
-            _signInManager = signInManager;
-        }
-
-        public ActionResult Register()
-        {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Register(RegisterViewModel registerViewModel)
-        {
-            if (ModelState.IsValid)
+            public AccountController(UserManager<CustomIdentityUser> userManager, RoleManager<CustomIdentityRole> roleManager, SignInManager<CustomIdentityUser> signInManager)
             {
-                CustomIdentityUser user = new CustomIdentityUser
+                _userManager = userManager;
+                _roleManager = roleManager;
+                _signInManager = signInManager;
+            }
+
+            public ActionResult Register()
+            {
+                return View();
+            }
+
+            [HttpPost]
+            [ValidateAntiForgeryToken]
+            public ActionResult Register(RegisterViewModel registerViewModel)
+            {
+                if (ModelState.IsValid)
                 {
-                    UserName = registerViewModel.UserName,
-                    Email = registerViewModel.Email
-                };
-                IdentityResult result = _userManager.CreateAsync(user,registerViewModel.Password).Result;
-                if (result.Succeeded)
-                {
-                    if (!_roleManager.RoleExistsAsync("Admin").Result)
+                    CustomIdentityUser user = new CustomIdentityUser
                     {
-                        CustomIdentityRole role = new CustomIdentityRole
+                        UserName = registerViewModel.UserName,
+                        Email = registerViewModel.Email
+                    };
+
+                    IdentityResult result =
+                        _userManager.CreateAsync(user, registerViewModel.Password).Result;
+
+                    if (result.Succeeded)
+                    {
+                        if (!_roleManager.RoleExistsAsync("Admin").Result)
                         {
-                            Name="Admin"
-                        };
-                        IdentityResult roleResult = _roleManager.CreateAsync(role).Result;
-                        if (!roleResult.Succeeded)
-                        {
-                            ModelState.AddModelError("","Rol Eklenemedi.");
-                            return View(registerViewModel);
+                            CustomIdentityRole role = new CustomIdentityRole
+                            {
+                                Name = "Admin"
+                            };
+
+                            IdentityResult roleResult = _roleManager.CreateAsync(role).Result;
+
+                            if (!roleResult.Succeeded)
+                            {
+                                ModelState.AddModelError("", "We can't add the role!");
+                                return View(registerViewModel);
+                            }
                         }
-                       
+
+                        _userManager.AddToRoleAsync(user, "Admin").Wait();
+                        return RedirectToAction("Login", "Account");
                     }
-                    _userManager.AddToRoleAsync(user,"NewUser").Wait();
-                    return RedirectToAction("Login","Account");
                 }
+
+                return View(registerViewModel);
             }
-            return View(registerViewModel);
-        }
-        public ActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Login(LoginViewModel loginViewModel)
-        {
-            if (ModelState.IsValid)
+
+            public ActionResult Login()
             {
-                var result = _signInManager.PasswordSignInAsync(loginViewModel.UserName,loginViewModel.Password,loginViewModel.RememberMe,false).Result;
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("Index","Admin");
-                }
-                ModelState.AddModelError("","Giriş Başarısız");
+                return View();
             }
-            return View(loginViewModel);
+
+            [HttpPost]
+            [ValidateAntiForgeryToken]
+            public ActionResult Login(LoginViewModel loginViewModel)
+            {
+                if (ModelState.IsValid)
+                {
+                    var result = _signInManager.PasswordSignInAsync(loginViewModel.UserName,
+                        loginViewModel.Password, loginViewModel.RememberMe, false).Result;
+
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("Index", "Admin");
+                    }
+
+                    ModelState.AddModelError("", "Invalid login!");
+                }
+
+                return View(loginViewModel);
+            }
+
+          
+            public ActionResult LogOff()
+            {
+                _signInManager.SignOutAsync().Wait();
+                return RedirectToAction("Login");
+            }
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Logoff()
-        {
-            _signInManager.SignOutAsync().Wait();
-            return RedirectToAction("Login");
-        }
-    }
 }

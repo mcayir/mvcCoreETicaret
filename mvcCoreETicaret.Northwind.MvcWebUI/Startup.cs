@@ -18,6 +18,8 @@ using Microsoft.AspNetCore.Cors.Infrastructure;
 using mvcCoreETicaret.Northwind.MvcWebUI.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.Rewrite.Internal.ApacheModRewrite;
 
 namespace mvcCoreETicaret.Northwind.MvcWebUI
 {
@@ -54,7 +56,12 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI
             app.UseNodeModules(env.ContentRootPath);
             app.UseIdentity();
             app.UseSession();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(configureRoutes);
+        }
+
+        private void configureRoutes(IRouteBuilder routeBuilder)
+        {
+            routeBuilder.MapRoute("Default","{Controller=Product}/{action=Index}/{id?}");
         }
     }
 }

@@ -1,0 +1,14 @@
+﻿@model mvcCoreETicaret.Northwind.MvcWebUI.Models.UserDetailsViewModel
+
+<ul class="dropdown-menu" >
+    @if (true)
+    {
+        <li>
+            <a>Hoş Geldiniz @Model.UserName</a>
+        </li>
+        <li>
+            <a asp-controller="Account" asp-action="LogOff"> Çıkış Yap</a>
+        </li>
+    }
+    
+</ul>
