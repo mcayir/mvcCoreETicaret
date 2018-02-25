@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace mvcCoreETicaret.Northwind.MvcWebUI.Controllers
 {
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles = "Yönetici")]
     public class AdminController : Controller
     {
         private IProductService _productService;

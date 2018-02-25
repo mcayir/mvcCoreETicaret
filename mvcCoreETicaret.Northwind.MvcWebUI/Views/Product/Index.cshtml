@@ -1,32 +1,26 @@
 ﻿@model mvcCoreETicaret.Northwind.MvcWebUI.Models.ProductListViewModel
-
 @{
     Layout = "~/Views/_Layout.cshtml";
 }
 
-
-    <table class="table table-striped" >
-        <thead>
-            <tr>
-                <th>Ürün Adı</th>
-                <th>Birim Fiyatı</th>
-                <th>Stok Adedi</th>
-            </tr>
-        </thead>
-        @foreach (var product in Model.Products)
-        {
-        <tr>
-            <td>@product.ProductName</td>
-            <td>@product.UnitPrice</td>
-            <td>@product.UnitsInStock</td>
-            <td><a class="btn btn-xs btn-success" asp-controller="Cart" asp-action="AddtoCart" asp-route-productId="@product.ProductId">Sepete Ekle</a></td>
-        </tr>
-        }
-    </table>
-
-<product-list-pager
-    current-category='@Model.CurrentCategory'
-    current-page='@Model.CurrentPage'
-    page-count='@Model.PageCount'
-    page-size="@Model.PageSize">
+<div class="container-fluid">
+    @foreach (var product in Model.Products)
+    {
+       <div class="col-sm-6 col-md-4">
+        <div class="thumbnail" style="height:350px; width:350px;">
+            <img src="~/node_modules/img/150.png"style="height:150px; width:300px;"/>
+            <div class="caption">
+                <h3 class="text-center">@product.ProductName</h3>
+                <p>Fiyatı: @product.UnitPrice ₺</p>
+                <p>Stok Adedi: @product.UnitsInStock</p>
+                <p><a class="btn btn-primary  pull-right" asp-controller="Cart" asp-action="AddtoCart" asp-route-productId="@product.ProductId">Sepete Ekle</a></p>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+<product-list-pager current-category='@Model.CurrentCategory'
+                    current-page='@Model.CurrentPage'
+                    page-count='@Model.PageCount'
+                    page-size="@Model.PageSize">
 </product-list-pager>

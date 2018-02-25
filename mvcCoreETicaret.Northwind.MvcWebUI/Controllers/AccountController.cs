@@ -44,23 +44,23 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI.Controllers
 
                     if (result.Succeeded)
                     {
-                        if (!_roleManager.RoleExistsAsync("Admin").Result)
+                        if (!_roleManager.RoleExistsAsync("Kullanıcı").Result)
                         {
                             CustomIdentityRole role = new CustomIdentityRole
                             {
-                                Name = "Admin"
+                                Name = "Kullanıcı"
                             };
 
                             IdentityResult roleResult = _roleManager.CreateAsync(role).Result;
 
                             if (!roleResult.Succeeded)
                             {
-                                ModelState.AddModelError("", "We can't add the role!");
+                                ModelState.AddModelError("", "Böyle bir Rol eklenemez");
                                 return View(registerViewModel);
                             }
                         }
 
-                        _userManager.AddToRoleAsync(user, "Admin").Wait();
+                        _userManager.AddToRoleAsync(user, "Kullanıcı").Wait();
                         return RedirectToAction("Login", "Account");
                     }
                 }
@@ -87,7 +87,7 @@ namespace mvcCoreETicaret.Northwind.MvcWebUI.Controllers
                         return RedirectToAction("Index", "Admin");
                     }
 
-                    ModelState.AddModelError("", "Invalid login!");
+                    ModelState.AddModelError("", "Giriş Hatalı Lütfen Tekrar Deneyiniz");
                 }
 
                 return View(loginViewModel);
